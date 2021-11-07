@@ -1,97 +1,118 @@
-
+.p-2 {
+    width: 90%;
+  }
+  /* p-2 is a class for a style of flex containers. The flex container is set to 90% to extend to majority of the allocated space given to a flex item in a container */
   
- .p-2 {
-     width: 90%;
- }
-   /* p-2 is a class for a style of flex containers. The flex container is set to 90% to extend to majority of the allocated space given to a flex item in a container */
-
-
- .list-group-item {
-     padding-top: 30px;
-     padding-bottom: 30px;
- }
- /* the listed items were too close to each other so a 30px padding was allocated to the top and bottom to increase readability */
-
- /* the following sections up until body are to replace the radio icons to stars
-    The color is changed when checked or not checked 
-    The width is set to 1em for each star 
-    Spacing between stars is also consistent
-    cursor: pointer  highlights the stars when the mouse hovers over those stars*/
-    /* Referenced: https://www.w3schools.com/howto/howto_css_star_rating.asp with help on setting up a star picker ui using css and html */
- *{
+  .list-group-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* the listed items were too close to each other so a 30px padding was allocated to the top and bottom to increase readability */
+  
+  /* the following sections up until body are to replace the radio icons to stars
+      The color is changed when checked or not checked 
+      The width is set to 1em for each star 
+      Spacing between stars is also consistent
+      cursor: pointer  highlights the stars when the mouse hovers over those stars*/
+  /* Referenced: https://www.w3schools.com/howto/howto_css_star_rating.asp with help on setting up a star picker ui using css and html */
+  * {
     margin: 0;
     padding: 0;
-}
-.rate {
+  }
+  .rate {
     float: left;
     height: 46px;
     padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-/* base star look */
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #ffc700;    
-}
-/* changes star color when hovering over a star */
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
+  }
+  .rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+  }
+  .rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+  }
+  /* base star look */
+  .rate:not(:checked) > label:before {
+    content: "★ ";
+  }
+  .rate > input:checked ~ label {
+    color: #ffc700;
+  }
+  /* changes star color when hovering over a star */
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
-}
-
-/* flex display for easy layout setup of page content and sticky footer/header */
-body{
+  }
+  
+  /* flex display for easy layout setup of page content and sticky footer/header */
+  body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-/* margin-top set to auto to push the footer to the bottom */
-footer{
+  }
+  /* margin-top set to auto to push the footer to the bottom */
+  footer {
     margin-top: auto;
-}
-
-/* the results container needs the first item (list) to be a smaller portion of the flex space. The items need to be centered and equally spaced from the edges of the screen */
-#results {
+  }
+  
+  /* the results container needs the first item (list) to be a smaller portion of the flex space. The items need to be centered and equally spaced from the edges of the screen */
+  #results {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
     flex: 1 25%;
     flex-wrap: wrap;
   }
-.center {
+  .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-}
-.star {
+  }
+  .star {
     color: yellow;
   }
-
- .review-sample {
-     padding: auto;
- }
- .form-group {
+  
+  .review-sample {
+    padding: auto;
+  }
+  .form-group {
     padding: 30px 30px;
- }
+  }
+  
+  /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+  #map {
+    height: 800px;
+    width: 900px;
+  }
+  
+  .custom-map-control-button {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    height: 40px;
+    cursor: pointer;
+  }
+  .custom-map-control-button:hover {
+    background: #ebebeb;
+  }
+  
