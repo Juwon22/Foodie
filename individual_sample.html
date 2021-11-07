@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Individual Sample</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="" /> -->
+  </head>
+  <body>
+    <!-- Header from bootstrap -- class identifies styling for dark background light text-->
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <!-- Flex Content for navigation buttons in the header -->
+        <div
+          class="
+            d-flex
+            flex-wrap
+            align-items-center
+            justify-content-center justify-content-lg-start
+          "
+        >
+          <a
+            href="/"
+            class="
+              d-flex
+              align-items-center
+              mb-2 mb-lg-0
+              text-white text-decoration-none
+            "
+          >
+            <svg
+              class="bi me-2"
+              width="40"
+              height="32"
+              role="img"
+              aria-label="Bootstrap"
+            >
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <!-- Buttons in the header for navigation-->
+          <ul
+            class="
+              nav
+              col-12 col-lg-auto
+              me-lg-auto
+              mb-2
+              justify-content-center
+              mb-md-0
+            "
+          >
+            <li><a href="search.html" class="btn btn-outline-light me-2">Home</a></li>
+            <li><a href="#" class="btn btn-outline-light me-2">Map</a></li>
+            <li>
+              <a href="submission.html" class="btn btn-outline-light me-2">Write a Review</a>
+            </li>
+          </ul>
+          <!-- Adding registration button to end of header -->
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">
+              Login / Sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sample Object Page -->
+    <div class="card pt-3" style="width: 100%">
+      <!-- image for sample resteraunt -->
+      <img
+        src="hibachi.jpg"
+        alt="hibachi"
+        class="card-img-top"
+        style="height: 400px"
+      />
+
+      <!-- bootstrap card component to make styling easier. Sample data for text -->
+      <!-- using font-awesome for stars for now.. -->
+      <div class="card-body">
+        <h1>Hibachi Japanese Steakhouse</h1>
+        <span class="fa fa-star star"></span>
+        <span class="fa fa-star star"></span>
+        <span class="fa fa-star star"></span>
+        <span class="fa fa-star star"></span>
+        <span class="fa fa-star"> <a href="https://www.google.ca/" target="_blank">(See 86 Reviews)</a> </span>
+        <p class="card-text">
+          111 Food Street<br />
+          (123)-456-7890<br />
+          Takeout | Delivery | Dine-in <br />
+          Closes 10:30pm
+        </p>
+      </div>
+    </div>
+
+    <div style="padding-top: 20px">
+      <!-- center text with bootstrap -->
+      <h3 class="text-center">Reviews</h3>
+    </div>
+    <!-- sample review with name, comment, and publish date. Font awesome icon for thumbs up and thumbs down -->
+    <div class="review-sample" style="padding: 5px;">
+          <b>Juwon Adeola </b> <span class="fa fa-star star"> 5.0 </span>
+          <p>This restaurant had amazing food. The atmosphere was great. Enjoyed my visit and will return again! <br>
+          Would definitely recommend to a friend.</p>
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+          <p style="font-weight: lighter;">Published 3 months ago</p>
+          <br>
+    </div>
+    <div class="review-sample" style="padding: 5px;">
+      <b>Juwon Adeola </b> <span class="fa fa-star star"> 5.0 </span>
+      <p>This restaurant had amazing food. The atmosphere was great. Enjoyed my visit and will return again! <br>
+      Would definitely recommend to a friend.</p>
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+      <p style="font-weight: lighter;">Published 3 months ago</p>
+      <br>
+</div>
+<div class="review-sample" style="padding: 5px;">
+  <b>Juwon Adeola </b> <span class="fa fa-star star"> 5.0 </span>
+  <p>This restaurant had amazing food. The atmosphere was great. Enjoyed my visit and will return again! <br>
+  Would definitely recommend to a friend.</p>
+  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+  <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+  <p style="font-weight: lighter;">Published 3 months ago</p>
+  <br>
+</div>
+
+<div>
+      <!-- sample image for where the map will sit -->
+      <img src="map.png" class="center-block" style="width:60%" alt="Sample Map Image, Final will have interactive elements">
+</div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="styles.css">
+        <!-- Bootstrap CSS -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+          crossorigin="anonymous"
+        />
+        <!-- Font Awesome Icon Library -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <title>Submit Review</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="" />
+      </head>
+    <body>
+        <!-- Header from bootstrap -- class identifies styling for dark background light text-->
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+          <!-- Flex Content for navigation buttons in the header -->
+          <div
+            class="
+              d-flex
+              flex-wrap
+              align-items-center
+              justify-content-center justify-content-lg-start
+            "
+          >
+            <a
+              href="/"
+              class="
+                d-flex
+                align-items-center
+                mb-2 mb-lg-0
+                text-white text-decoration-none
+              "
+            >
+              <svg
+                class="bi me-2"
+                width="40"
+                height="32"
+                role="img"
+                aria-label="Bootstrap"
+              >
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+            <!-- Buttons in the header for navigation-->
+            <ul
+              class="
+                nav
+                col-12 col-lg-auto
+                me-lg-auto
+                mb-2
+                justify-content-center
+                mb-md-0
+              "
+            >
+              <li><a href="search.html" class="btn btn-outline-light me-2">Home</a></li>
+              <li><a href="#" class="btn btn-outline-light me-2">Map</a></li>
+              <li>
+                <a href="submission.html" class="btn btn-outline-light me-2">Write a Review</a>
+              </li>
+            </ul>
+            <!-- Adding registration button to end of header -->
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">
+                Login / Sign-up
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div>
+          <br>
+          <h1> Write a Review</h1>
+          <br>
+      </div>
+
+      <!-- bootstrap form for submitting a review -->
+      <form>
+          <!-- takes name -->
+        <div class="form-group" style="padding: 20px;">
+          <label for="exampleFormControlInput1">Name</label>
+          <input type="text" class="form-control" id="NameInput" placeholder="John Doe">
+        </div>
+        <!-- takes a start rating as dropdown (1 - 5) -->
+        <div class="form-group" style="padding: 20px;">
+          <label for="exampleFormControlSelect1">Star Rating</label>
+          <select class="form-control" id="StarSelect">
+            <option>Select an option</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <!-- takes comment (text) -->
+        <div class="form-group" style="padding: 20px;">
+          <label for="exampleFormControlTextarea1">Comment</label>
+          <textarea class="form-control" id="CommentInput" rows="3" placeholder="Your comments go here..."></textarea>
+        </div>
+        <!-- takes file -->
+        <div class="form-group" style="padding: 20px;">
+            <label for="exampleFormControlFile1">Attach Images</label>
+            <input type="file" class="form-control-file" id="FileSubmit">
+              
+        </div>
+        <!-- Longitude -->
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <input type="text" class="form-control" placeholder="Longitude">
+            </div>
+            <div class="col-md-4 mb-3">
+              <input type="text" class="form-control" placeholder="Latitude">
+            </div>
+          </div>
+            <!-- submit form -->
+        <div class="text-center"style="padding: 20px;">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+            
+      </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
