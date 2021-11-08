@@ -95,13 +95,13 @@
           <!-- takes name -->
         <div class="form-group" style="padding: 20px;">
           <label for="exampleFormControlInput1">Name</label>
-          <input type="text" class="form-control" id="NameInput" placeholder="John Doe">
+          <input required type="text" class="form-control" id="NameInput" placeholder="John Doe">
         </div>
         <!-- takes a start rating as dropdown (1 - 5) -->
         <div class="form-group" style="padding: 20px;">
           <label for="exampleFormControlSelect1">Star Rating</label>
-          <select class="form-control" id="StarSelect">
-            <option>Select an option</option>
+          <select  class="form-control" id="StarSelect" required>
+            <!-- <option>Select an option</option> -->
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -112,7 +112,7 @@
         <!-- takes comment (text) -->
         <div class="form-group" style="padding: 20px;">
           <label for="exampleFormControlTextarea1">Comment</label>
-          <textarea class="form-control" id="CommentInput" rows="3" placeholder="Your comments go here..."></textarea>
+          <textarea required class="form-control" id="CommentInput" rows="3" placeholder="Your comments go here..."></textarea>
         </div>
         <!-- takes file -->
         <div class="form-group" style="padding: 20px;">
@@ -123,10 +123,10 @@
         <!-- Longitude -->
         <div class="form-row">
             <div class="col-md-4 mb-3">
-              <input type="text" class="form-control" placeholder="Longitude">
+              <input required type="text" class="form-control" placeholder="Longitude">
             </div>
             <div class="col-md-4 mb-3">
-              <input type="text" class="form-control" placeholder="Latitude">
+              <input required type="text" class="form-control" placeholder="Latitude">
             </div>
           </div>
             <!-- submit form -->

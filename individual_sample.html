@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="individual_sample.js"></script>
     <title>Individual Sample</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -145,10 +146,21 @@
   <br>
 </div>
 
-<div>
       <!-- sample image for where the map will sit -->
-      <img src="map.png" class="center-block" style="width:60%" alt="Sample Map Image, Final will have interactive elements">
-</div>
+      <!-- <img src="map.png" class="center-block" style="width:60%" alt="Sample Map Image, Final will have interactive elements"> -->
+      <div class="card">
+        <div id="map"></div>
+  
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6HpqbR4G-x6woL42pExBsxTx-WrV6Jik&callback=initMap&v=weekly"
+        async
+      ></script>
+      </div>
+  
+  
+    </div>
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
