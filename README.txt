@@ -25,7 +25,12 @@ Map goes to results_sample.html
 
 Github Link: https://github.com/Juwon22/Foodie
 
-*NOTE*
+**NOTE**
+We are not able to purchase a domain name to setup up SSL/HTTPS at this time. 
+Please update your chrome flags as specified below to see Geolocation functionalty as required.
+We will have it sorted out for Part 3.
+
+
 For geolocation, please add the chrome flag for our IP address http://18.189.154.74 on #unsafely-treat-insecure-origin-as-secure at chrome://flags to see geolocation functionality.
 See https://stackoverflow.com/questions/32106849/getcurrentposition-and-watchposition-are-deprecated-on-insecure-origins for reference
 Geolocation API does not work on HTTP pages anymore.
