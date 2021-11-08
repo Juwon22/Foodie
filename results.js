@@ -5,14 +5,14 @@
 let map, infoWindow;
 const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let labelIndex = 0;
-
+// Initialize map code collected from the google api open source tutorial page for map sdk 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 43.26028519568593, lng: -79.91918248465578 },
+    center: { lat: 43.26028519568593, lng: -79.91918248465578 }, // currently hardcoded to show the area near mcmaster university
     zoom: 15,
   });
   infoWindow = new google.maps.InfoWindow();
-
+  // Added button to collect geolocation and pan towards user location
   const locationButton = document.createElement("button");
 
   locationButton.textContent = "Pan to Current Location";
@@ -45,7 +45,7 @@ function initMap() {
 
   //Hardcoded markers to show near map
   var marker1 = new google.maps.Marker({
-    position: { lat: 43.25744110523284, lng: -79.92901009822207 },
+    position: { lat: 43.25744110523284, lng: -79.92901009822207 }, // chose wendys near the campus as an example marker, ideally in part 3 all nearby restaurants are highlighted
     map,
     title: "Wendy's",
     label: labels[labelIndex++ % labels.length]
@@ -54,7 +54,7 @@ function initMap() {
   marker1.setMap(map);
 
   var marker2 = new google.maps.Marker({
-    position: { lat: 43.26144154612341, lng: -79.907166188592217},
+    position: { lat: 43.26144154612341, lng: -79.907166188592217}, // second example hardcoded 
     map,
     title: "Chung Chun",
     label: labels[labelIndex++ % labels.length]
@@ -63,6 +63,7 @@ function initMap() {
   marker2.setMap(map);
 }
 
+// if errors occured in geolocation 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(

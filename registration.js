@@ -1,8 +1,11 @@
 
+
+// bootstrap elements already have validation attached to it 
+// this function will give users notification based on what is missing or invalid 
 function validateForm() {
 
     let formErrors = 0;
-
+    
     if (document.forms["formReg"]["fname"].value == "") {
         document.getElementById("fnameInvalid").style.display = "block";
         formErrors++;

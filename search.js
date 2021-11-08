@@ -1,7 +1,7 @@
 
 function searchByDeviceLocation() {
     UserLocation = null;
-
+    // Using Geolocation to collect user coordinates 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showLocation, console.log);
 
@@ -13,7 +13,8 @@ function searchByDeviceLocation() {
     }
 }
 
-
+// Using Open source api opencagedata to collect formatted address based on coordinates collected from geolocation 
+// final version of function seen below for showlocation, this one was used for testing what is possible 
 const successfulLookup = position => {
     const { latitude, longitude } = position.coords;
     fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=576079d7875e4c5896f91f2aab2bf5e6`)
@@ -21,11 +22,13 @@ const successfulLookup = position => {
         .then(showLocation(position)); // Or do whatever you want with the result
 };
 
+// filler function used for debugging 
 function printSomething() {
     console.log("Something");
 }
 
-
+// Show location function is a more robust version of successfullookup
+// builds request url then collects data
 const showLocation = position => {
     var api_key = '576079d7875e4c5896f91f2aab2bf5e6';
     latitude = position.coords.latitude;
@@ -55,11 +58,12 @@ const showLocation = position => {
             var data = JSON.parse(request.responseText);
             console.log(data);
             userLocation = data.results[0].formatted; // print the location
-
+            // collected formatted address
             var locationCard = document.getElementById("locationCard");
             locationCard.style.display = "block";
             var locationResults = document.getElementById("locationResult");
             // For part 2 we are simply showing the location we are searching near, ideally this would redirect to the results page and collect restaurant data and display it on the map and on the list 
+            // in part 3 the address will be passed to the results page and show the location on the map 
             locationResults.innerHTML = "Searching for restaurants near approximate location: \n" + userLocation;
 
         } else if (request.status <= 500) {
@@ -75,7 +79,7 @@ const showLocation = position => {
             console.log("server error");
         }
     };
-
+    // if errors occured in connecting to geolocation or open source api 
     request.onerror = function () {
         // There was a connection error of some sort
         console.log("unable to connect to server");
