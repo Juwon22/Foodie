@@ -71,7 +71,7 @@ const showLocation = position => {
             // in part 3 the address will be passed to the results page and show the location on the map 
             locationResults.innerHTML = "Searching for restaurants near approximate location: \n" + userLocation;
 
-            goToResultsPage();
+        
 
         } else if (request.status <= 500) {
             // We reached our target server, but it returned an error
@@ -103,7 +103,7 @@ function searchByParameters() {
 
     url = base_url + "/Applications/XAMPP/xamppfiles/htdocs/Foodie/Foodie/results_sample.html" + "?keyword=" + encodeURIComponent(parameters.keyword) + "&location=" + encodeURIComponent(parameters.location) + "&rating=" + encodeURIComponent(parameters.rating);
 
-    document.location.href = url;
+    
 
 }
 
@@ -116,5 +116,5 @@ function goToResultsPage() {
 
     url = base_url + "/Applications/XAMPP/xamppfiles/htdocs/Foodie/Foodie/results_sample.html" + "?latitude=" + encodeURIComponent(parameters.lat) + "&longitude=" + encodeURIComponent(parameters.long);
 
-    document.location.href = url;
+   
 }
