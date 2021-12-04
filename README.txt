@@ -37,6 +37,7 @@ Geolocation API does not work on HTTP pages anymore.
 
 PART 3
 Added .ddl file for database design.
+Double click html files for search.html and results.html and geolocation should work
 
 
 
