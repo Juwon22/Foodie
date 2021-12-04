@@ -1,4 +1,7 @@
 
+const parameters = {long: "", lat: "", location: "", keyword: "", rating: ""};
+const base_url = window.location.origin;
+
 function searchByDeviceLocation() {
     UserLocation = null;
     // Using Geolocation to collect user coordinates 
@@ -33,6 +36,8 @@ const showLocation = position => {
     var api_key = '576079d7875e4c5896f91f2aab2bf5e6';
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
+    parameters.lat = latitude; 
+    parameters.long = longitude;
 
     var api_url = 'https://api.opencagedata.com/geocode/v1/json'
 
@@ -56,7 +61,7 @@ const showLocation = position => {
         if (request.status === 200) {
             // Success!
             var data = JSON.parse(request.responseText);
-            console.log(data);
+            // console.log(data);
             userLocation = data.results[0].formatted; // print the location
             // collected formatted address
             var locationCard = document.getElementById("locationCard");
@@ -65,6 +70,8 @@ const showLocation = position => {
             // For part 2 we are simply showing the location we are searching near, ideally this would redirect to the results page and collect restaurant data and display it on the map and on the list 
             // in part 3 the address will be passed to the results page and show the location on the map 
             locationResults.innerHTML = "Searching for restaurants near approximate location: \n" + userLocation;
+
+            goToResultsPage();
 
         } else if (request.status <= 500) {
             // We reached our target server, but it returned an error
@@ -86,4 +93,28 @@ const showLocation = position => {
     };
 
     request.send();  // make the request
+}
+
+function searchByParameters() {
+    parameters.keyword = document.getElementById("keywordInput").value;
+    parameters.location = document.getElementById("locationInput").value;
+    
+    console.log(parameters);
+
+    url = base_url + "/Applications/XAMPP/xamppfiles/htdocs/Foodie/Foodie/results_sample.html" + "?keyword=" + encodeURIComponent(parameters.keyword) + "&location=" + encodeURIComponent(parameters.location) + "&rating=" + encodeURIComponent(parameters.rating);
+
+    document.location.href = url;
+
+}
+
+function setRating(rating) {
+    parameters.rating = rating;
+}
+
+function goToResultsPage() {
+    console.log(parameters);
+
+    url = base_url + "/Applications/XAMPP/xamppfiles/htdocs/Foodie/Foodie/results_sample.html" + "?latitude=" + encodeURIComponent(parameters.lat) + "&longitude=" + encodeURIComponent(parameters.long);
+
+    document.location.href = url;
 }

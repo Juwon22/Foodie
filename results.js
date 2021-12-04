@@ -5,10 +5,11 @@
 let map, infoWindow;
 const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let labelIndex = 0;
+let mapLoc = { lat: 43.26028519568593, lng: -79.91918248465578 };
 // Initialize map code collected from the google api open source tutorial page for map sdk 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 43.26028519568593, lng: -79.91918248465578 }, // currently hardcoded to show the area near mcmaster university
+    center: mapLoc, // currently hardcoded to show the area near mcmaster university
     zoom: 15,
   });
   infoWindow = new google.maps.InfoWindow();
@@ -72,4 +73,24 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
       : "Error: Your browser doesn't support geolocation."
   );
   infoWindow.open(map);
+}
+
+
+window.onload = function () {
+  var url = document.location.href, params = url.split('?')[1].split('&'), data = {}, tmp;
+
+  for (var i = 0, l = params.length; i < l; i++) {
+    tmp = params[i].split('=');
+    data[tmp[0]] = tmp[1];
+  }
+
+  console.log(data);
+
+  var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch({
+                location : mapLoc,
+                radius : 5500,
+                type : [ 'restaurant' ]
+            }, callback);
+
 }
