@@ -11,7 +11,7 @@ LINK TO WEBSERVER (Proj2 Folder)
 18.189.154.74/Proj2
 
 Home Page
-http://18.189.154.74/Proj2/Foodie/search.html
+http://18.189.154.74/Proj3/Foodie/search.html
 
 
 
@@ -38,6 +38,9 @@ Geolocation API does not work on HTTP pages anymore.
 PART 3
 Added .ddl file for database design.
 Double click html files for search.html and results.html and geolocation should work
+
+Home Page
+http://18.189.154.74/Proj3/Foodie/search.html
 
 
 
