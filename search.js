@@ -101,7 +101,7 @@ function searchByParameters() {
     
     console.log(parameters);
 
-    url = base_url + "?keyword=" + encodeURIComponent(parameters.keyword) + "&location=" + encodeURIComponent(parameters.location) + "&rating=" + encodeURIComponent(parameters.rating);
+    url = base_url + "/Applications/XAMPP/xamppfiles/htdocs/Foodie/Foodie/results_sample.html" + "?keyword=" + encodeURIComponent(parameters.keyword) + "&location=" + encodeURIComponent(parameters.location) + "&rating=" + encodeURIComponent(parameters.rating);
 
     document.location.href = url;
 
@@ -114,7 +114,7 @@ function setRating(rating) {
 function goToResultsPage() {
     console.log(parameters);
 
-    url = base_url + "?latitude=" + encodeURIComponent(parameters.lat) + "&longitude=" + encodeURIComponent(parameters.long);
+    url = base_url + "/Applications/XAMPP/xamppfiles/htdocs/Foodie/Foodie/results_sample.html" + "?latitude=" + encodeURIComponent(parameters.lat) + "&longitude=" + encodeURIComponent(parameters.long);
 
     document.location.href = url;
 }
